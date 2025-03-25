@@ -1,0 +1,19 @@
+
+version: '3.8'
+
+services:
+  streamlit:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    command: streamlit run app/streamlit_dashboard.py --server.port=8501 --server.address=0.0.0.0
+
+  fastapi:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: uvicorn api.fastapi_backend:app --host 0.0.0.0 --port 8000
