@@ -12,32 +12,25 @@ ChainPulseAI combines social media sentiment and on-chain activity to build a pr
 1️⃣ **Tweet Sentiment Analysis**  
 → Preprocess tweets using VADER  
 → Compute daily average sentiment per token  
-📄 [`01_sentiment_processing.ipynb`](notebooks/01_sentiment_processing.ipynb)
 
 2️⃣ **On-Chain Transaction Monitoring**  
 → Detect spikes and whale/bot behavior  
-📄 [`02_onchain_analysis.ipynb`](notebooks/02_onchain_analysis.ipynb)
 
 3️⃣ **Merge with Market Data**  
 → Calculate volatility, candlestick patterns  
-📄 [`03_merge_and_volatility.ipynb`](notebooks/03_merge_and_volatility.ipynb)
 
 4️⃣ **Label Events**  
 → Tag spikes, dips, pump/dumps  
-📄 [`04_event_labeling.ipynb`](notebooks/04_event_labeling.ipynb)
 
 5️⃣ **Train ML Model**  
 → Predict “Risk score” or event category  
 → Includes SHAP explainability  
-📄 [`05_model_training.ipynb`](notebooks/05_model_training.ipynb)
 
 6️⃣ **Streamlit Dashboard**  
 → Visualize sentiment, volume, risk alerts  
-🖥️ [`streamlit_dashboard.py`](app/streamlit_dashboard.py)
 
 7️⃣ **FastAPI Backend (Optional)**  
 → Serve real-time model predictions  
-🌐 [`fastapi_backend.py`](api/fastapi_backend.py)
 
 ---
 
