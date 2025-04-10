@@ -34,6 +34,9 @@ def predict_mc_dropout_tf(model, X, n_iter=50):
 
     return np.array([call_with_dropout(X).numpy() for _ in range(n_iter)])
 
+y_dropout = predict_mc_dropout_tf(model, X_test, n_iter=50)
+
+
 # --- Load Forecast Arrays ---
 y_pred = np.load("y_pred_transformer.npy")         # shape: (samples, 7, features)
 y_true = np.load("y_test_transformer.npy")
