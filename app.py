@@ -17,7 +17,7 @@ def load_data():
 
 @st.cache_resource
 def load_transformer_model():
-    return load_model("models/transformer_model.h5")
+    return load_model("transformer_model.h5")
 
 df = load_data()
 model = load_transformer_model()
