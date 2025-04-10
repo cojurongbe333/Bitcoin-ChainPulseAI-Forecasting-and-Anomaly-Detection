@@ -12,7 +12,7 @@ st.set_page_config(page_title="ChainPulseAI Dashboard", layout="wide")
 # --- Load Data ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data/btc_hourly.csv", parse_dates=['datetime'], index_col='datetime')
+    df = pd.read_csv("btc_hourly.csv", parse_dates=['datetime'], index_col='datetime')
     return df
 
 @st.cache_resource
