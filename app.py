@@ -26,6 +26,13 @@ model = load_transformer_model()
 
 import tensorflow as tf
 
+import numpy as np
+from tensorflow.keras.models import load_model
+
+# Load model and test data
+model = load_model("transformer_model.keras")
+X_test = np.load("X_test.npy"
+
 # Enable dropout at inference by setting training=True
 def predict_mc_dropout_tf(model, X, n_iter=50):
     @tf.function
