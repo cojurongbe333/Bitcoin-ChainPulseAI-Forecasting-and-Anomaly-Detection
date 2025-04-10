@@ -15,9 +15,11 @@ def load_data():
     df = pd.read_csv("btc_hourly.csv", parse_dates=['datetime'], index_col='datetime')
     return df
 
+from tensorflow.keras.models import load_model
+
 @st.cache_resource
 def load_transformer_model():
-    return load_model("transformer_model.h5")
+    return load_model("transformer_model.keras")
 
 df = load_data()
 model = load_transformer_model()
