@@ -24,6 +24,16 @@ def load_transformer_model():
 df = load_data()
 model = load_transformer_model()
 
+import tensorflow as tf
+
+# Enable dropout at inference by setting training=True
+def predict_mc_dropout_tf(model, X, n_iter=50):
+    @tf.function
+    def call_with_dropout(x):
+        return model(x, training=True)
+
+    return np.array([call_with_dropout(X).numpy() for _ in range(n_iter)])
+
 # --- Load Forecast Arrays ---
 y_pred = np.load("y_pred_transformer.npy")         # shape: (samples, 7, features)
 y_true = np.load("y_test_transformer.npy")
