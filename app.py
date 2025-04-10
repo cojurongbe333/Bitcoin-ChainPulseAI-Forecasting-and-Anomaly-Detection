@@ -25,7 +25,7 @@ df = load_data()
 model = load_transformer_model()
 
 # --- Load Forecast Arrays ---
-y_pred = np.load("data/y_pred_transformer.npy")         # shape: (samples, 7, features)
+y_pred = np.load("y_pred_transformer.npy")         # shape: (samples, 7, features)
 y_true = np.load("data/y_test_transformer.npy")
 y_dropout = np.load("data/y_preds_dropout.npy")         # shape: (50, samples, 7, features)
 
