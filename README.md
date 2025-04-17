@@ -1,7 +1,7 @@
 # 📈 ChainPulseAI: Bitcoin Forecasting and Anomaly Detection
 
 **Enhanced Streamlit App + GRU/Transformer Forecasting + Anomaly Evaluation**
-
+**Build in Progress**
 ---
 
 ## 🔍 Project Overview
